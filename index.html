@@ -75,6 +75,27 @@
 <script src="https://unpkg.com/jquery"></script>
 <script>
   // Add your code here!
+  $("article img").addClass("image-center");
+
+  const $lastP = $("article p").last()
+  $lastP.remove();
+
+  const ranSize = Math.floor(Math.random() * 100)
+  $("#title").css("font-size", ranSize)
+
+  const $addedListItem = $("<li>").text("Dang that puppy is cute!");
+
+  $("ol").append($addedListItem);
+
+  $("aside").empty().append("<p>").text("Man I really miss my list :(.")
+
+  let colorId = [red, blue, green];
+
+
+
+
+  $("input")
+
 </script>
 </body>
 
