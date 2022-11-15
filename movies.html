@@ -23,14 +23,15 @@
         let ratingInput = $(".title-rating").eq(1).val();
         let $banner = $("<div>").text(`${titleInput} ${ratingInput}`);
         let $removeBtn = $("<button>").text("Remove");
-        $("body").append($banner);
-        $banner.append($removeBtn);
 
-        $("body").on("click", "button", function(evt) {
-          $(evt.target).parent().remove();
-        })
+        if(titleInput !== '') {
+          $("body").append($banner);
+          $banner.append($removeBtn);
+        }
+      });
 
-
+      $("body").on("click", "button", function(evt) {
+        $(evt.target).parent().remove();
       });
     </script>
   </body>
